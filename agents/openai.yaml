@@ -1,0 +1,4 @@
+interface:
+  display_name: "经典阅读读书笔记生成器"
+  short_description: "根据书籍码和书名生成排版合规的 Word 读书笔记"
+  default_prompt: "书名号122,书名《活着》。请按本 Skill 填写内容概括和读书感悟，各不少于700汉字，生成Word并检查。"
