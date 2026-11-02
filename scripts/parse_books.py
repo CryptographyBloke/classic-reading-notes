@@ -12,7 +12,7 @@ def parse_line(line):
         return None
     # "书名号122,书名活着,作者余华" and "书籍码122，书名《活着》"
     cm = re.search(r"(?:书籍码|书名号|书籍编号|编号)\s*[：:=]?\s*([\w-]+)", line)
-    tm = re.search(r"(?:^|[,，;；]\s*)书名\s*[：:=]?\s*《?([^》,，;；\n]+)》?", line)
+    tm = re.search(r"(?:^|[,，;；]\s*)书名(?!号)\s*[：:=]?\s*《?([^》,，;；\n]+)》?", line)
     am = re.search(r"(?:^|[,，;；]\s*)作者\s*[：:=]?\s*([^,，;；\n]+)", line)
     code = cm.group(1).strip() if cm else ""
     author = am.group(1).strip() if am else ""
